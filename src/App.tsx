@@ -84,7 +84,8 @@ function Shoebox() {
         window.clearTimeout(openTimerRef.current);
       if (confettiOffTimerRef.current != null)
         window.clearTimeout(confettiOffTimerRef.current);
-      if (vanishTimerRef.current != null) window.clearTimeout(vanishTimerRef.current);
+      if (vanishTimerRef.current != null)
+        window.clearTimeout(vanishTimerRef.current);
     };
   }, []);
 
@@ -108,7 +109,8 @@ function Shoebox() {
           }, 4500);
 
           setVanishBox(false);
-          if (vanishTimerRef.current != null) window.clearTimeout(vanishTimerRef.current);
+          if (vanishTimerRef.current != null)
+            window.clearTimeout(vanishTimerRef.current);
           vanishTimerRef.current = window.setTimeout(() => {
             setVanishBox(true);
           }, 700);
@@ -176,8 +178,7 @@ function Shoebox() {
             transform: isOpen
               ? "translateY(0) scale(1)"
               : "translateY(10px) scale(0.98)",
-            transition:
-              "transform 650ms cubic-bezier(0.18, 0.9, 0.2, 1.05)",
+            transition: "transform 650ms cubic-bezier(0.18, 0.9, 0.2, 1.05)",
           }}
         />
       </Box>
@@ -330,9 +331,7 @@ function App() {
           placeItems: "center",
           px: 2,
           background:
-            "radial-gradient(1000px 700px at 20% 20%, rgba(0, 255, 145, 0.50) 0%, rgba(0, 255, 145, 0) 60%)," +
-            "radial-gradient(900px 700px at 85% 35%, rgba(0, 210, 120, 0.55) 0%, rgba(0, 210, 120, 0) 55%)," +
-            "linear-gradient(135deg, #0a7f49 0%, #14b86a 35%, #1be38b 70%, #29ffad 100%)",
+            "linear-gradient(to top right,rgb(47, 89, 52) 0%,rgb(87, 164, 114) 45%,rgb(150, 214, 159) 75%,rgb(178, 233, 193) 100%)",
         }}
       >
         <Shoebox />
