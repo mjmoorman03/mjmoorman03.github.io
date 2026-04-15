@@ -421,7 +421,7 @@ function App() {
           placeItems: "center",
           px: 2,
           background:
-            "linear-gradient(to top right,rgb(47, 89, 52) 0%,rgb(87, 164, 114) 45%,rgb(150, 214, 159) 75%,rgb(178, 233, 193) 100%)",
+            "linear-gradient(to top right,rgb(0, 141, 163) 0%,rgb(0, 229, 203) 45%,rgb(0, 206, 206) 75%,rgb(0, 246, 255) 100%)",
         }}
       >
         <Shoebox />
