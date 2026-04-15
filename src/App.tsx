@@ -218,11 +218,28 @@ function Shoebox() {
             top: { xs: 42, sm: 48 },
             borderRadius: 4,
             background:
-              "linear-gradient(145deg, rgba(216, 181, 129, 1) 0%, rgba(191, 147, 92, 1) 45%, rgba(162, 113, 62, 1) 100%)",
+              "linear-gradient(145deg, rgba(244, 231, 207, 1) 0%, rgba(231, 212, 179, 1) 48%, rgba(217, 190, 149, 1) 100%)",
             boxShadow: "0 24px 70px rgba(0,0,0,0.35)",
             overflow: "hidden",
           }}
         >
+          {/* vertical ribbon on box body */}
+          <Box
+            sx={{
+              position: "absolute",
+              top: 0,
+              bottom: 0,
+              left: "50%",
+              width: { xs: 20, sm: 24 },
+              transform: "translateX(-50%)",
+              background:
+                "linear-gradient(180deg, rgba(211, 26, 45, 0.96) 0%, rgba(168, 15, 31, 0.96) 100%)",
+              boxShadow:
+                "inset 2px 0 0 rgba(255,255,255,0.2), inset -2px 0 0 rgba(0,0,0,0.2)",
+              pointerEvents: "none",
+            }}
+          />
+
           {/* subtle inner shadow */}
           <Box
             sx={{
@@ -271,7 +288,7 @@ function Shoebox() {
             height: { xs: 78, sm: 86 },
             borderRadius: 4,
             background:
-              "linear-gradient(145deg, rgba(231, 197, 146, 1) 0%, rgba(205, 162, 107, 1) 55%, rgba(173, 125, 73, 1) 100%)",
+              "linear-gradient(145deg, rgba(252, 241, 221, 1) 0%, rgba(236, 217, 184, 1) 55%, rgba(221, 196, 159, 1) 100%)",
             boxShadow: "0 18px 35px rgba(0,0,0,0.25)",
             transformOrigin: "18% 90%",
             transform: isOpen
@@ -282,6 +299,79 @@ function Shoebox() {
               : "transform 780ms cubic-bezier(0.18, 0.9, 0.2, 1.05)",
           }}
         >
+          {/* vertical ribbon on lid */}
+          <Box
+            sx={{
+              position: "absolute",
+              top: 0,
+              bottom: 0,
+              left: "50%",
+              width: { xs: 22, sm: 26 },
+              transform: "translateX(-50%)",
+              background:
+                "linear-gradient(180deg, rgba(211, 26, 45, 0.96) 0%, rgba(168, 15, 31, 0.96) 100%)",
+              boxShadow:
+                "inset 2px 0 0 rgba(255,255,255,0.24), inset -2px 0 0 rgba(0,0,0,0.18)",
+              pointerEvents: "none",
+            }}
+          />
+
+          {/* infinity-style bow at top edge */}
+          <Box
+            sx={{
+              position: "absolute",
+              left: "50%",
+              top: { xs: -34, sm: -36 },
+              width: { xs: 69, sm: 81 },
+              height: { xs: 36, sm: 42 },
+              transform: "translateX(-50%)",
+              pointerEvents: "none",
+            }}
+          >
+            <Box
+              sx={{
+                position: "absolute",
+                left: 0,
+                top: "58%",
+                width: { xs: 33, sm: 39 },
+                height: { xs: 24, sm: 27 },
+                transform: "translateY(-50%) rotate(34deg)",
+                borderRadius: "999px",
+                border: "5px solid rgba(188, 18, 35, 0.98)",
+                boxSizing: "border-box",
+                background: "rgba(240, 71, 89, 0.65)",
+              }}
+            />
+            <Box
+              sx={{
+                position: "absolute",
+                right: 0,
+                top: "58%",
+                width: { xs: 33, sm: 39 },
+                height: { xs: 24, sm: 27 },
+                transform: "translateY(-50%) rotate(-34deg)",
+                borderRadius: "999px",
+                border: "5px solid rgba(188, 18, 35, 0.98)",
+                boxSizing: "border-box",
+                background: "rgba(240, 71, 89, 0.65)",
+              }}
+            />
+            <Box
+              sx={{
+                position: "absolute",
+                left: "50%",
+                top: "70%",
+                width: { xs: 15, sm: 18 },
+                height: { xs: 15, sm: 18 },
+                transform: "translate(-50%, -50%)",
+                borderRadius: "999px",
+                background:
+                  "radial-gradient(circle at 30% 30%, rgba(255,95,109,0.98) 0%, rgba(191, 17, 36, 0.98) 62%, rgba(145, 10, 26, 0.98) 100%)",
+                boxShadow: "0 3px 8px rgba(108, 8, 19, 0.35)",
+              }}
+            />
+          </Box>
+
           <Box
             sx={{
               position: "absolute",
